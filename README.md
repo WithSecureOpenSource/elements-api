@@ -8,6 +8,7 @@ Avilable materials supplement official [Elements API reference](https://connect.
 ## Repository structure
 
 * `/examples/scripts/python` - sample programs implementing common Elements API use cases
+* `/integrations/sentinel/data_connector` - Azure Sentinel Data Connector
 
 ## License
 
