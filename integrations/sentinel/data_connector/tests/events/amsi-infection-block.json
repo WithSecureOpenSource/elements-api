@@ -1,0 +1,38 @@
+{
+  "severity": "warning",
+  "acknowledged": false,
+  "serverTimestamp": "2023-10-25T12:52:40.905Z",
+  "persistenceTimestamp": "2023-10-25T12:52:43.194Z",
+  "userName": "DESKTOP-V94MVCO\\tikhdm",
+  "clientTimestamp": "2023-10-25T12:52:13Z",
+  "target": {
+    "name": "zx2C6rCUcZ5sIzF",
+    "id": "ab076697-323a-4629-8e1a-5ccabf0f4bf7"
+  },
+  "engine": "amsi",
+  "organization": {
+    "name": "antkma-sep-company",
+    "id": "4de503e1-2c58-45c3-89a6-ef3f4a03592b"
+  },
+  "action": "blocked",
+  "details": {
+    "profileName": "tikhdm-tamper",
+    "sha1": "1aef59dac1e2328b402d6fee5b5f76439ce98f43",
+    "path": "C:\\WINDOWS\\system32\\cscript.exe",
+    "alertType": "amsi.infection.block",
+    "appName": "JScript",
+    "profileId": "19325830",
+    "profileVersion": "1604055983",
+    "infectionName": "Testfile:JS/F-Secure_testfile.D",
+    "hostIpAddress": "fe80::e09a:970a:a01c:ca1a/64",
+    "userName": "DESKTOP-V94MVCO\\tikhdm",
+    "clientTimestamp": "1698238333000",
+    "contentName": "C:\\Users\\tikhdm\\AppData\\Local\\Temp\\infected.js"
+  },
+  "eventTransactionId": "0000-109ee5d96da2479a",
+  "id": "273af66e-8bae-3931-9cb0-4f3d9e1a50e1_0",
+  "device": {
+    "name": "zx2C6rCUcZ5sIzF",
+    "id": "ab076697-323a-4629-8e1a-5ccabf0f4bf7"
+  }
+}
