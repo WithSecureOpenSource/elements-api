@@ -1,0 +1,36 @@
+{
+  "severity": "warning",
+  "acknowledged": false,
+  "serverTimestamp": "2023-12-18T11:28:12.594Z",
+  "persistenceTimestamp": "2023-12-18T11:28:16.801Z",
+  "userName": "DESKTOP-UCETTHQ\\gtn-user",
+  "clientTimestamp": "2023-12-18T11:28:07Z",
+  "target": {
+    "name": "unXw225W45gokh4",
+    "id": "d5dd6d22-dc1d-41f4-833d-1cca84c9c68a"
+  },
+  "engine": "reputationBasedBrowsing",
+  "organization": {
+    "name": "ws-company",
+    "id": "4de503e1-2c58-45c3-89a6-ef3f4a03592b"
+  },
+  "action": "blocked",
+  "details": {
+    "profileName": "ext-radzma2-company-2-profile",
+    "reason": "BP_Harmful",
+    "process": "microsoftedgecp.exe",
+    "alertType": "online_safety.harmful_page.block",
+    "profileId": "20453148",
+    "profileVersion": "1591102700",
+    "hostIpAddress": "10.133.3.197/22",
+    "userName": "DESKTOP-UCETTHQ\\gtn-user",
+    "clientTimestamp": "1702898887000",
+    "url": "hxxps://malicious.fstestdomain.com"
+  },
+  "id": "0c4b2fe9-c1d7-36d5-bec0-ad6ffb896669_13",
+  "eventTransactionId": "0000-983230617dc2471d",
+  "device": {
+    "name": "unXw225W45gokh4",
+    "id": "d5dd6d22-dc1d-41f4-833d-1cca84c9c68a"
+  }
+}

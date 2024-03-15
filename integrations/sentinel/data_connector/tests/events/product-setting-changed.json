@@ -1,0 +1,38 @@
+{
+  "severity": "info",
+  "acknowledged": false,
+  "serverTimestamp": "2023-12-18T11:28:12.594Z",
+  "persistenceTimestamp": "2023-12-18T11:28:16.772Z",
+  "userName": "ta_tujrstm7300\\tadmin",
+  "clientTimestamp": "2023-12-18T11:28:07Z",
+  "target": {
+    "name": "unXw225W45gokh4",
+    "id": "d5dd6d22-dc1d-41f4-833d-1cca84c9c68a"
+  },
+  "engine": "setting",
+  "organization": {
+    "name": "ws-company",
+    "id": "4de503e1-2c58-45c3-89a6-ef3f4a03592b"
+  },
+  "action": "reported",
+  "details": {
+    "isRemoteChange": "false",
+    "profileName": "TA_TEST_2",
+    "newValue": "false",
+    "restoreTimestamp": "519951324900",
+    "alertType": "product.setting.changed",
+    "profileId": "910739",
+    "profileVersion": "1628068587",
+    "hostIpAddress": "10.61.40.100/22",
+    "oldValue": "true",
+    "userName": "ta_tujrstm7300\\tadmin",
+    "clientTimestamp": "1702898887000",
+    "settingName": "windows.realtime_scanning.scanning_enabled"
+  },
+  "id": "0c4b2fe9-c1d7-36d5-bec0-ad6ffb896669_7",
+  "eventTransactionId": "0000-983230617dc2471d",
+  "device": {
+    "name": "unXw225W45gokh4",
+    "id": "d5dd6d22-dc1d-41f4-833d-1cca84c9c68a"
+  }
+}

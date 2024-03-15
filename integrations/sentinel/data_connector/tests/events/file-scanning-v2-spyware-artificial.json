@@ -1,0 +1,42 @@
+{
+  "severity": "critical",
+  "acknowledged": false,
+  "serverTimestamp": "2023-12-18T11:28:12.594Z",
+  "persistenceTimestamp": "2023-12-18T11:28:16.846Z",
+  "clientTimestamp": "2023-12-18T11:28:07Z",
+  "target": {
+    "name": "unXw225W45gokh4",
+    "id": "d5dd6d22-dc1d-41f4-833d-1cca84c9c68a"
+  },
+  "engine": "fileScanning",
+  "organization": {
+    "name": "ws-company",
+    "id": "4de503e1-2c58-45c3-89a6-ef3f4a03592b"
+  },
+  "action": "none",
+  "details": {
+    "availableActions": "block,disinfect,delete,rename,quarantine",
+    "quarantineId": "1984",
+    "creator": "C:\\Program Files\\Far Manager\\Far.exe",
+    "alertType": "on_access_scanner.file_infection.nothing",
+    "infectionName": "Risk_Test_File",
+    "subItem": "C:\\tmp\\samples.7z\\[1] samples.7z\\[1] f11.exe",
+    "reputation": "150",
+    "readOnly": "true",
+    "clientTimestamp": "1702898887000",
+    "creatorSha1": "dc3e119de3c46c5913cbdc504827797bd633c610",
+    "recommendedAction": "block",
+    "sha1": "aa8c41330509455ee5679d04ed41535d280d9a01",
+    "path": "C:\\Users\\Administrator\\AppDataLocal\\Temp\\Temp1_3-eicars-with-com-ending.zip\\eicar1.com",
+    "prevalence": "40",
+    "infectionType": "spyware",
+    "fileScanningType": "fileInfection",
+    "rebootRequiredToDelete": "true"
+  },
+  "eventTransactionId": "0000-983230617dc2471d",
+  "id": "0c4b2fe9-c1d7-36d5-bec0-ad6ffb896669_18",
+  "device": {
+    "name": "unXw225W45gokh4",
+    "id": "d5dd6d22-dc1d-41f4-833d-1cca84c9c68a"
+  }
+}

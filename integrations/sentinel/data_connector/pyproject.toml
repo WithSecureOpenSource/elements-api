@@ -1,0 +1,30 @@
+[tool.poetry]
+version = "1.0.0"
+description = "WithSecure Elements API Data Connector"
+authors = ["WithSecure"]
+readme = "README.md"
+name = "app"
+
+[tool.poetry.dependencies]
+python = "~3.10"
+requests = "^2.31.0"
+azure-storage-file-share = "^12.13.0"
+azure-data-tables = "^12.4.4"
+azure-identity = "^1.15.0"
+azure-monitor-ingestion = "^1.0.3"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"
+black = "^23.7.0"
+azure-functions = "^1.17.0"
+pyflakes = "3.2.0"
+
+[tool.poetry.scripts]
+dist-app = "scripts.dist_app:dist_app"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[pytest]
+testpaths = "tests"

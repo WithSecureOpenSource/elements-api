@@ -1,0 +1,30 @@
+{
+  "severity": "warning",
+  "acknowledged": false,
+  "serverTimestamp": "2023-12-18T11:28:12.594Z",
+  "persistenceTimestamp": "2023-12-18T11:28:16.803Z",
+  "clientTimestamp": "2023-12-18T11:28:07Z",
+  "target": {
+    "name": "unXw225W45gokh4",
+    "id": "d5dd6d22-dc1d-41f4-833d-1cca84c9c68a"
+  },
+  "engine": "browsingProtection",
+  "organization": {
+    "name": "ws-company",
+    "id": "4de503e1-2c58-45c3-89a6-ef3f4a03592b"
+  },
+  "action": "blocked",
+  "details": {
+    "reason": "BP_Harmful",
+    "alertType": "online_safety.page.block",
+    "categories": "alcoholAndTobacco,gambling",
+    "clientTimestamp": "1702898887000",
+    "url": "harmful.com"
+  },
+  "id": "0c4b2fe9-c1d7-36d5-bec0-ad6ffb896669_23",
+  "eventTransactionId": "0000-983230617dc2471d",
+  "device": {
+    "name": "unXw225W45gokh4",
+    "id": "d5dd6d22-dc1d-41f4-833d-1cca84c9c68a"
+  }
+}
