@@ -78,10 +78,12 @@ create Entra application before deploying connector.
 
 1. In Azure portal go to `Microsoft Entra ID` and open `App registrations` from left menu.
    
-   ![List of Entra applications](images/app_registration_ok.png)
+   ![List of Entra applications](images/app_registrations_ok.png)
 
 2. Click button `New registration`. In field `Name` enter name of application, for example 
    `UserGuideApp` and click button `Register`.
+   
+   ![Entra App registration](images/entra_app_registration_ok.png)
 
 3. Click on application name in the list to open details of new Entra application.
    
