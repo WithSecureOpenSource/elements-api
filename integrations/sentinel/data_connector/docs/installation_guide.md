@@ -110,3 +110,77 @@ create Entra application before deploying connector.
    on screenshot) and click link with application name.
    
 9. Copy value from field `Object ID` to parameter `entraObjectId` in file `connector_app_parameters.json`.
+
+#### Deploy Azure resources
+
+WithSecure Elements API connector is implemented as Azure Function App. Azure ARM template
+from file `azuredeploy_connector_app.json` deploys all required resources:
+ - Function App with Application Insights,
+ - Data Collection Rule,
+ - Data Collection Endpoint,
+ - Storage Account.
+ 
+ ARM template can be deployed from command line. Before deployment check 
+ `connector_app_paramters.json` and ensure that all parameters have values describe in
+ previous sections of this guide.
+
+![Deployment parameters file](images/parameters_ok.png)
+
+ In command line go to directory `ws_client/deploy`, execute command 
+ `az deployment group create -n ConnectorApp -g UserGuide -f azuredeploy_connector_app.json -p connector_app_parameters.json` 
+ and wait until execution finish. Remember to replace `UserGuide` with name of resource
+ group with your Sentinel solution.
+ 
+#### Verify installation
+
+Go to resource group with Sentinel solution. After successful deployment it should contain 
+items similar to ones from screenshot below.
+
+![Resource group](images/resource_group_after_ok.png)
+
+After deployment connector starts polling Security Events from Elements backend. Every
+minute reads most recent events and push to table `WsSecurityEvents_CL` in Log Analytics 
+Workspace. **WARNING: Connector skip Security Events that were created BEFORE installation**
+
+![Ingested Security Events in Sentinel solution](images/security_events_logs.png)
+
+To check table go to your Sentinel solution and open `Logs` view. Expand node `Custom Logs`.
+If `WsSecurityEvents_CL` is visible then double click on table. Click button `Run` to fetch 
+ingested events.
+
+Missing or empty `WsSecurityEvents_CL` might indicate that connector can't read Security 
+Events or ingest to Log Analytics workspace. Connector logs can be checked in Azure 
+Function App console. 
+
+1. Go to `UserGuide` resource group.
+
+2. On list find item of type `Function App` and name with prefix `Connector` (red square on 
+   screenshot). Click on item to open details view.
+   
+   ![Function App details](images/function_ok.png)
+   
+3. In details view in tab `Functions` find row with name `upload_security_events`. Click
+   on link `Invocations and more` in column `Monitor`.
+   
+4. Every row in table represents single connector executions. Exception in execution logs
+   might indicate either communication errors, such as invalid credentials or other 
+   unexpected conditions. If you need help from [WithSecure support](https://www.withsecure.com/en/support)
+   remember to provide full exectution log.
+   
+   ![Logs with exception](images/error_logs_ok.png)
+   
+5. To check last execution you can also run Application Insights query. 
+   ```
+   traces
+   | where timestamp > ago(30d)
+   | where operation_Name =~ 'upload_security_events'
+   | where message contains "Found" or message contains "Error"
+   | order by timestamp desc
+   | take 200
+   ```
+   Message that starts with `Found 0 items since $DATE` indicates that connector didn't found 
+   any new items since `$DATE`.
+   
+   ![Application Insigths query](images/function_insights_ok.png)
+
+If you need more help with connector you can try contact [WithSecure support](https://www.withsecure.com/en/support).
