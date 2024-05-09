@@ -136,7 +136,7 @@ from file `azuredeploy_connector_app.json` deploys all required resources:
 Go to resource group with Sentinel solution. After successful deployment it should contain 
 items similar to ones from screenshot below.
 
-![Resource group](images/resource_group_after_ok.png)
+![Resource group](images/resources_group_after_ok.png)
 
 After deployment connector starts polling Security Events from Elements backend. Every
 minute reads most recent events and push to table `WsSecurityEvents_CL` in Log Analytics 
