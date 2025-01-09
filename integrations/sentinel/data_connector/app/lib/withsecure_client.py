@@ -69,13 +69,17 @@ class WithSecureClient:
         fetch_page = True
         log.info(f"Reading events created after {from_date}")
         all_events = []
-        while fetch_page:
+        max_events = 1000
+        while fetch_page and len(all_events) < max_events:
             page = self._get_events_page(auth_token, from_date, org_id, next_page)
             next_page = page.get("nextAnchor")
 
             fetch_page = next_page is not None
             for event in page["items"]:
                 all_events.append(SecurityEvent(**event))
+                if len(all_events) >= max_events:
+                    fetch_page = False
+                    break
 
         return all_events
 
@@ -98,7 +102,7 @@ class WithSecureClient:
             engine_param_value = "epp,edr,ecp"
 
         data = {
-            "limit": 20,
+            "limit": 100,
             "persistenceTimestampStart": from_date,
             "order": "asc",
             engine_param: engine_param_value,
