@@ -32,7 +32,7 @@ group called `UserGuide`. Initially it only contains Log Analytics Workspace cal
 
 Installation package provides [ARM template](https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/) 
 that deploys WithSecure Elements API connector in Azure portal. Download installation 
-package from [github.com](https://github.com/WithSecureOpenSource/elements-api/releases/download/1.0.0/install.zip)
+package from [github.com](https://github.com/WithSecureOpenSource/elements-api/releases/download/1.0.1/install.zip)
 and extract archive in preferred localization. Directory `ws_connector/deploy` contains two 
 files:
  - `azuredeploy_connector_app.json` - ARM template that deploys all required resources in
